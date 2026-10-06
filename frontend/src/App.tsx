@@ -149,6 +149,65 @@ export default function App() {
             <article><small>Running Jobs</small><strong>{summary?.running_jobs ?? 0}</strong><span>Automation in progress</span></article>
           </section>
 
+          <section className="panel overview-panel">
+            <div className="section-heading">
+              <div>
+                <h2>Infrastructure Overview</h2>
+                <p className="section-subtitle">Simulated multi-vendor topology</p>
+              </div>
+              <div className="overview-controls">
+                <span className="mini-pill">All Sites</span>
+                <span className="mini-pill active-pill">Live</span>
+              </div>
+            </div>
+
+            <div className="topology">
+              <div className="topology-node internet">
+                <div className="node-icon">◎</div>
+                <strong>Internet</strong>
+                <span>WAN</span>
+              </div>
+
+              <div className="connector horizontal c1" />
+
+              <div className="topology-node firewall">
+                <div className="node-icon">▦</div>
+                <strong>FortiGate</strong>
+                <span>fw-01</span>
+              </div>
+
+              <div className="connector horizontal c2" />
+
+              <div className="topology-node core">
+                <div className="node-icon">▤</div>
+                <strong>Core Switch</strong>
+                <span>core-sw-01</span>
+              </div>
+
+              <div className="connector branch-line servers-line" />
+              <div className="connector branch-line vmware-line" />
+              <div className="connector branch-line branchsites-line" />
+
+              <div className="topology-node servers">
+                <div className="node-icon">▥</div>
+                <strong>Servers</strong>
+                <span>18 online</span>
+              </div>
+
+              <div className="topology-node vmware">
+                <div className="node-icon">VM</div>
+                <strong>VMware</strong>
+                <span>36 VMs</span>
+              </div>
+
+              <div className="topology-node branches">
+                <div className="node-icon">⌂</div>
+                <strong>Branch Sites</strong>
+                <span>Cambridge + London</span>
+              </div>
+            </div>
+          </section>
+
           <section className="panel">
             <div className="section-heading">
               <h2>Devices</h2>
