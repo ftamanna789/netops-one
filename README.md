@@ -33,7 +33,13 @@ The current dashboard provides a central view of:
 - Backup results
 - Running and completed automation jobs
 
-A dashboard screenshot will be added to this README after the image is uploaded to the repository.
+![NetOps One dashboard](02_48_20%20PM.png)
+
+### Key Features
+
+- Centralised view of sites, devices and health with simulated real-time metrics.
+- Safe automation workflow with **Pre-check → Backup → Change → Verify → Rollback**.
+- Mock REST API backend ready for future multi-vendor device integration.
 
 ## Architecture
 
